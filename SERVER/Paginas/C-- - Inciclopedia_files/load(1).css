@@ -1,0 +1,306 @@
+.forumheader {
+	padding: 12px; border: 1px solid rgb(170, 170, 170); border-image: none; margin-top: 1em; background-color: rgb(249, 249, 249);
+}
+.forumlist td span {
+	padding-left: 10px; font-size: smaller; display: block;
+}
+.forumlist td span a {
+	text-decoration: none;
+}
+.forumlist td span.forum_author {
+	padding-left: 30px;
+}
+.forumlist td.forum_edited a {
+	text-decoration: none;
+}
+.forumlist td.forum_title a {
+	padding-left: 20px;
+}
+.forumlist td.forum_title span a {
+	padding-left: 0px;
+}
+.forumlist td.forum_title a.forum_new {
+	background: url("//inciclopedia.org/images/1/11/Newmsg.png") no-repeat left; padding-left: 20px; font-weight: bold;
+}
+.forumlist td.forum_title a.forum_new:visited {
+	background: none; padding-left: 20px; font-weight: normal;
+}
+.forumlist th.forum_title {
+	padding-left: 20px;
+}
+.forumborder {
+	border-collapse: collapse;
+}
+.forumborder td {
+	border-top-color: rgb(170, 170, 170); border-top-width: 1px; border-top-style: solid;
+}
+body.ns-112 #p-logo a {
+	background-image: url("https://images.uncyclomedia.co/inciclopedia/es/c/c9/ChixpyLogoIncinoticias.png") !important;
+}
+body.ns-113 #p-logo a {
+	background-image: url("https://images.uncyclomedia.co/inciclopedia/es/c/c9/ChixpyLogoIncinoticias.png") !important;
+}
+body.ns-116 #p-logo a {
+	background-image: url("https://images.uncyclomedia.co/inciclopedia/es/7/78/Logo_patataboy.png") !important;
+}
+body.ns-117 #p-logo a {
+	background-image: url("https://images.uncyclomedia.co/inciclopedia/es/7/78/Logo_patataboy.png") !important;
+}
+.textocita {
+	background: none; margin: 0px; padding: 0px 1ex 1ex; font-family: "Palatino Linotype",Garamond,"Times New Roman",serif; font-size: 120%; font-style: italic;
+}
+.autorcita {
+	background: none; margin: 0px; padding: 0px 1ex 0ex; font-family: Arial,Helvetica,sans-serif; font-size: 70%; font-style: normal;
+}
+.LetraaTunes {
+	text-align: center; font-style: italic;
+}
+#wikia-credits {
+	display: none;
+}
+table.evolucion td.flecha {
+	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNTAiIGhlaWdodD0iMjgiPjxwYXRoIHN0eWxlPSJmaWxsOiNkZGQiIGQ9Im0gMCw2LjUgMzMyLDAgMCwtNi41IDE4LDE0IC0xOCwxNCAwLC02LjUgLTMzMiwwIHoiIC8+PC9zdmc+") no-repeat right; padding: 0px 1.5em; height: 30px; color: rgb(0, 0, 0); font-size: larger; vertical-align: middle;
+}
+pre {
+	overflow: auto;
+}
+code {
+	padding: 0px 3px; border: 1px solid rgb(221, 221, 221); border-image: none;
+}
+#content ol {
+	list-style-position: inside;
+}
+#content ul {
+	list-style-position: inside;
+}
+#mw-read-only-warning {
+	background: rgb(255, 170, 170); border: 5px solid rgb(136, 136, 136); border-image: none; font-size: large;
+}
+div.thumb {
+	background: none; border: currentColor; border-image: none;
+}
+.tright {
+	margin-left: 1em;
+}
+.tleft {
+	margin-right: 1em;
+}
+#article {
+	text-align: justify;
+}
+#bodyContent {
+	text-align: justify;
+}
+a.stub {
+	color: magenta;
+}
+ol.references {
+	margin: 0px; padding: 0px 3em; font-size: smaller; column-count: 2; column-gap: 3em; -moz-column-count: 2; -moz-column-gap: 3em;
+}
+@media screen, projection
+{
+ol.references {
+	height: auto; overflow: auto; max-height: 200px;
+}
+}
+#toc {
+	margin: 0px auto;
+}
+#toc > tbody > tr > td > ul {
+	overflow: auto; padding-right: 1ex; max-height: 200px;
+}
+.tablabonita {
+	background: rgb(249, 249, 249); margin: 0.5em auto; padding: 0.5em; border: 1px solid rgb(170, 170, 170); border-image: none; color: black; font-size: 95%; border-collapse: collapse;
+}
+.tablabonita th {
+	background: rgb(239, 239, 239); text-align: center; color: black;
+}
+.sortheader {
+	width: 16px; height: 100%; text-align: center; margin-left: 0.25em; vertical-align: middle; border-bottom-color: rgb(136, 136, 136); border-left-color: rgb(136, 136, 136); border-bottom-width: 1px; border-left-width: 1px; border-bottom-style: dotted; border-left-style: dotted; float: right; display: block; position: relative;
+}
+.imagenpopup .popup {
+	display: none; speak: none;
+}
+.imagenpopup .enlace a {
+	color: rgb(0, 128, 0);
+}
+.imagenpopup:hover .popup {
+	background: none; padding: 2em 1em 1em 2em; margin-top: -50px; margin-left: -200px; display: inline; position: absolute; z-index: 10;
+}
+.imagenpopup span.thumb {
+	background: none; border: currentColor; border-image: none; width: auto;
+}
+.imagenpopup span.thumbinner {
+	padding: 3px; border: 1px solid rgb(200, 204, 209); border-image: none; text-align: center; overflow: hidden; font-size: 94%; background-color: rgb(248, 249, 250);
+}
+.enlacelista a:hover {
+	background: rgb(33, 88, 184); border: 1px solid rgb(13, 36, 74); border-image: none; color: white; text-decoration: none; -moz-border-radius: 0 0 15px 15px;
+}
+.mw-history-undo {
+	display: none;
+}
+#mw-diff-ntitle1 a + a + a {
+	display: none;
+}
+#mw-dismissable-notice {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+#mw-dismissable-notice > tbody > tr > td {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+#mw-dismissable-notice > tbody > tr > td + td {
+	display: none !important;
+}
+body.page-Inciclopedia_Portada .firstHeading {
+	display: none !important;
+}
+body.page-Inciclopedia_Portada #catlinks {
+	display: none !important;
+}
+.CajaPortada {
+	padding: 1ex; border: 1px solid rgb(173, 216, 230); border-image: none; text-align: center; vertical-align: top;
+}
+.TituloPortada {
+	padding: 1ex; color: black; font-size: 12pt; font-weight: bold; background-color: rgb(173, 216, 230);
+}
+.tabberlive .tabbernav li a {
+	line-height: 2em !important; margin-top: 5px;
+}
+table.col1der tr > *:first-child {
+	text-align: right;
+}
+table.col1izq tr > *:first-child {
+	text-align: justify;
+}
+table.col1cen tr > *:first-child {
+	text-align: center;
+}
+table.col2der tr > *:first-child + td {
+	text-align: right;
+}
+table.col2izq tr > *:first-child + td {
+	text-align: justify;
+}
+table.col2cen tr > *:first-child + td {
+	text-align: center;
+}
+table.col3der tr > *:first-child + td + td {
+	text-align: right;
+}
+table.col3izq tr > *:first-child + td + td {
+	text-align: justify;
+}
+table.col3cen tr > *:first-child + td + td {
+	text-align: center;
+}
+table.col4der tr > *:first-child + td + td + td {
+	text-align: right;
+}
+table.col4izq tr > *:first-child + td + td + td {
+	text-align: justify;
+}
+table.col4cen tr > *:first-child + td + td + td {
+	text-align: center;
+}
+table.col5der tr > *:first-child + td + td + td + td {
+	text-align: right;
+}
+table.col5izq tr > *:first-child + td + td + td + td {
+	text-align: justify;
+}
+table.col5cen tr > *:first-child + td + td + td + td {
+	text-align: center;
+}
+table.col6der tr > *:first-child + td + td + td + td + td {
+	text-align: right;
+}
+table.col6izq tr > *:first-child + td + td + td + td + td {
+	text-align: justify;
+}
+table.col6cen tr > *:first-child + td + td + td + td + td {
+	text-align: center;
+}
+table.col7der tr > *:first-child + td + td + td + td + td + td {
+	text-align: right;
+}
+table.col7izq tr > *:first-child + td + td + td + td + td + td {
+	text-align: justify;
+}
+table.col7cen tr > *:first-child + td + td + td + td + td + td {
+	text-align: center;
+}
+.allpagesredirect {
+	font-style: italic;
+}
+#file img {
+	background: url("data:image/gif;base64,R0lGODdhEAAQAIABAO/v7////ywAAAAAEAAQAAACH4RvoauIzNyBSyYaLMDZcv15HAaSIlWiJ5Sya/RWVgEAOw==");
+}
+div.Boxmerge {
+	margin: 0px; padding: 2px; border: 1px solid rgb(170, 170, 170); border-image: none; text-align: center; font-size: 95%; border-collapse: collapse;
+}
+div.NavFrame {
+	margin: 0px; padding: 2px; border: 1px solid rgb(170, 170, 170); border-image: none; text-align: center; font-size: 95%; border-collapse: collapse;
+}
+div.Boxmerge div.NavFrame {
+	border-style: hidden;
+}
+div.NavFrame + div.NavFrame {
+	border-top-style: hidden;
+}
+div.NavPic {
+	margin: 0px; padding: 2px; float: left;
+}
+div.NavFrame div.NavHead {
+	height: 1.6em; font-size: 100%; font-weight: bold; background-color: rgb(240, 240, 255);
+}
+div.NavFrame p {
+	font-size: 100%;
+}
+div.NavFrame div.NavContent {
+	font-size: 100%;
+}
+div.NavFrame div.NavContent p {
+	font-size: 100%;
+}
+div.NavEnd {
+	margin: 0px; padding: 0px; line-height: 1px; clear: both;
+}
+a.NavToggle {
+	margin: 0px; padding: 2px; font-size: smaller; font-weight: normal; float: right; z-index: 100;
+}
+.textooculto {
+	display: none;
+}
+.textovisible:hover .textooculto {
+	background: white; padding: 5px; border: 1px solid rgb(170, 170, 170); border-image: none; color: black; display: inline !important; position: absolute; z-index: 100 !important;
+}
+.menuoculto {
+	display: none;
+}
+.menuvisible:hover .menuoculto {
+	padding: 5px; border: 1px solid rgb(170, 170, 170); border-image: none; display: block !important; z-index: 100 !important;
+}
+#titlehack {
+	display: inline !important;
+}
+.plantilla_Banner1 {
+	background-position: bottom; background-repeat: repeat-x;
+}
+.plantilla_Banner1 a {
+	text-decoration: none;
+}
+#mw-content-text span.fakeinterwiki > a {
+	display: none;
+}
+#searchInputSuggest {
+	font-size: 13px;
+}
+.article-thumb {
+	padding: 2px 4px 0px 2px; border: 1px solid rgb(180, 187, 200); border-image: none; text-align: left; font-size: 9pt; margin-right: 5px; margin-left: 2px; background-color: rgb(249, 249, 249);
+}
+.center {
+	margin-right: auto; margin-left: auto;
+}
+body.ns-114 #p-logo a::after {
+	background: url("//images.uncyclomedia.co/inciclopedia/es/thumb/f/fe/Incitables1.png/125px-Incitables1.png") no-repeat center; top: 132px; width: 10em; height: 28px; position: absolute; content: "";
+}
