@@ -12,7 +12,11 @@ class server
 {
 public:
 	server();
-	void startConnection();
+	bool startConnection();	//Modificado: devuelve TRUE si se pudo conectar
+	bool receiveInstruction();	//Lee el pedido del cliente. TRUE si el mensaje esta bien formado (no se fija si existe el archivo)
+	bool searchPath(); //true si pudo encontrar
+	void sendAnswer(); //Envia la respuesta
+
 	void sendMessage();
 	~server();
 
@@ -23,7 +27,7 @@ private:
 };
 
 
-void server::
+bool server::
 startConnection()
  {
 	
@@ -46,6 +50,8 @@ startConnection()
 	
 	//server_acceptor->accept(*socket_forServer);
 	socket_forServer->non_blocking(true);
+
+	return (error) ? true : false;
 }
 
 void server::
@@ -64,6 +70,7 @@ sendMessage()
 	if (error)
 		std::cout << "Error while trying to connect to server " << error.message() << std::endl;
 }
+
 
 server::
 server() 

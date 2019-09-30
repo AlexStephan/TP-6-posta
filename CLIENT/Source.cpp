@@ -13,7 +13,12 @@ class client
 {
 public:
 	client();
+
+	//Nota: tengo la impresion de q estos metodos devuelven void y no bool para marcar un error, porq creo q boost usa excepciones)
 	void startConnection(const char* host);
+	void sendInstruction();
+	bool receiveAnswer(const char* filename); //recive la respuesta del servidor y lo copia en el archivo cuyo nombre se especifica. TRUE si pudo escribir el archivo
+
 	void receiveMessage();
 	~client();
 
