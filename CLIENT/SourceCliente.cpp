@@ -60,7 +60,7 @@ void client::
 receiveMessage() 
 {
 	boost::system::error_code error;
-	char buf[2000];
+	char buf[512];
 	size_t len=0;
 	cout << "Receiving Message" << std::endl;
 	boost::timer::cpu_timer t;
