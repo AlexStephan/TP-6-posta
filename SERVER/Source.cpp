@@ -51,18 +51,26 @@ startConnection()
 void server::
 sendMessage() 
 {
-	char buf[512] = "Hello from server.";
+	#define PORTION 20
+	#define MIN(x,y) (((x)<(y))?(x):(y))
 
-	size_t len;
+	char buf[] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et eros orci. Ut faucibus leo at diam rhoncus malesuada. Donec vel mauris dignissim, bibendum sem eu, tincidunt felis. Vivamus nunc mauris, ullamcorper vel finibus sit amet, feugiat sit amet neque. Fusce sagittis malesuada neque. Etiam at vulputate odio, sit amet hendrerit arcu. Etiam congue tellus sed risus elementum, quis gravida massa gravida. \nDonec sapien sapien, porttitor sed est in, posuere pellentesque arcu.Integer vitae euismod mauris, at luctus sapien.In lobortis nunc ut ullamcorper semper.Pellentesque metus nisi, rhoncus sed luctus quis, aliquet at metus.Fusce erat nisi, dictum ac purus et, tempor aliquet diam.Morbi eleifend velit sit amet fermentum lacinia.Integer dui tellus, cursus sit amet eros aliquam, iaculis pharetra ex.Sed eu metus elit.Sed pellentesque, ex sit amet elementum malesuada, metus augue gravida velit, vitae auctor mi arcu vitae elit.Cras sed sagittis sem.\nUt ut orci fringilla, cursus libero at, pellentesque mauris.Pellentesque molestie sem in ipsum feugiat, mollis tristique ligula sagittis.Phasellus felis tellus, vulputate nec elit sed, faucibus sollicitudin nibh.Integer quis tellus sit amet dui bibendum vulputate.Donec dictum leo sit amet quam condimentum feugiat.Sed eu bibendum justo.Vestibulum commodo nulla volutpat est efficitur mollis.Praesent mattis eleifend nunc, at imperdiet sem lacinia et. ";
+
+	size_t index = 0;
+	size_t totalLen = sizeof(buf);
 	boost::system::error_code error;
 
 	do
 	{
-		len = socket_forServer->write_some(boost::asio::buffer(buf,strlen(buf)), error);
+		index += socket_forServer->write_some(boost::asio::buffer(buf + index,MIN(strlen(buf + index),PORTION) ), error);
+		std::cout << "Send " << index << " bytes\n";
+		Sleep(500);
 	}
-	while ((error.value() == WSAEWOULDBLOCK));
-	if (error)
+	while ((error.value() == WSAEWOULDBLOCK) || index!=totalLen);
+	if (error) {
 		std::cout << "Error while trying to connect to server " << error.message() << std::endl;
+		Sleep(8000);
+	}
 }
 
 server::
