@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class client 
+class client
 {
 public:
 	client();
@@ -33,7 +33,7 @@ client()
 }
 
 client::
-~client() 
+~client()
 {
 	socket_forClient->close();
 	delete client_resolver;
@@ -42,7 +42,7 @@ client::
 }
 
 void client::
-startConnection(const char* host) 
+startConnection(const char* host)
 {
 	endpoint = client_resolver->resolve(boost::asio::ip::tcp::resolver::query(host, HELLO_PORT_STR));
 	boost::system::error_code error;
@@ -50,43 +50,42 @@ startConnection(const char* host)
 	if (error)
 	{
 		cout << "Error connecting to " << host << " Error Message: " << error.message() << endl;
-		if(error.value() == boost::asio::error::connection_refused)
+		if (error.value() == boost::asio::error::connection_refused)
 			cout << "Host " << host << " is not listening on the other side" << endl;
 	}
 	socket_forClient->non_blocking(true);
 }
 
 void client::
-receiveMessage() 
+receiveMessage()
 {
 	boost::system::error_code error;
-	char buf[512];
-	size_t len=0;
+	char buf[2000];
+	size_t len = 0;
 	cout << "Receiving Message" << std::endl;
 	boost::timer::cpu_timer t;
 	t.start();
 	boost::timer::cpu_times pastTime = t.elapsed();
 	double elapsedSeconds = 0.0;
-	
+
 	do
-	{	
+	{
 		len = socket_forClient->read_some(boost::asio::buffer(buf), error);
 
 		boost::timer::cpu_times currentTime = t.elapsed();
 
 		if ((currentTime.wall - pastTime.wall) > 1e9)
 		{
-			elapsedSeconds += (currentTime.wall - pastTime.wall)/1e9;
+			elapsedSeconds += (currentTime.wall - pastTime.wall) / 1e9;
 			pastTime = currentTime;
-			cout << "Pasaron " << (int) floor(elapsedSeconds) <<" segundos." << endl;
+			cout << "Pasaron " << (int)floor(elapsedSeconds) << " segundos." << endl;
 		}
 
 		if (!error)
 			buf[len] = '\0';
-		
-	} 
-	while (error.value() == WSAEWOULDBLOCK);
-	
+
+	} while (error.value() == WSAEWOULDBLOCK);
+
 	if (!error)
 		cout << std::endl << "Server sais: " << buf << std::endl;
 	else
@@ -94,14 +93,16 @@ receiveMessage()
 }
 
 
-int 
+int
 main(int argc, char* argv[])
 {
+
 	client conquering;
 	cout << "Trying to connect to " << SERVER_IP << " on port " << HELLO_PORT_STR << std::endl;
 	conquering.startConnection(SERVER_IP);
 	conquering.receiveMessage();
 	cout << "Press Enter to exit..." << std::endl;
+
 	getchar();
 	return 0;
 }
